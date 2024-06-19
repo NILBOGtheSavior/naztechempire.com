@@ -1,5 +1,5 @@
 var slides = ['', '/products/merlinus', '/software/3d_printer_utility'];
-var captions = ['Welcome to Naztech Empire', 'Track progress of the Merlinus 3D Printer', 'Beta test Naztech 3D Printer Utility on Unix devices'];
+var captions = ['Welcome to Naztech Empire', 'Track progress of the Merlinus 3D Printer', 'Beta test 3D Printer Utility on Unix devices'];
 var i = 0;
 var timer;
 

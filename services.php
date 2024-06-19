@@ -26,45 +26,11 @@
     <body>
         <div class="slim">
             <?php require 'scripts/session.php'; ?>
-<header class="blur">
-    <a href="/index.php" id="logo"><img src="/img/logo.svg" alt=""></a>
-    <nav>
-        <a href="/index.php">Home</a>
-        <a href="/software.php">Software</a>
-        <!-- <a href="/downloads.html">Downloads</a> -->
-        <!-- <a href="#">Videos</a> -->
-        <a href="/blog.php">Blog</a>
-        <a href="/services.php">Services</a>
-    </nav>
-    <div id="account_info">
-        <?php if ($_SESSION["username"]): ?>
-            <small><a href="account.php"><?= $_SESSION["username"]; ?></a></small>
-            <a onclick="toggleMenu('account_menu');"><img src="/img/icons/account.png" alt=""></a>
-        <?php else: ?>
-            <small><a onclick="openOverlay('login')">Login</a></small>
-            <a>|</a>
-            <small><a onclick="openOverlay('signup')">Sign Up</a></small>
-        <?php endif; ?>
-    </div>
-    <div id="hamburger" onclick="toggleMenu('hamburger_menu');">
-        <div class="bun"></div>
-        <div class="bun"></div>
-        <div class="bun"></div>
-    </div>
-</header>
-<div id="hamburger_menu" class="blur">
-    <a href="/index.php">Home</a>
-    <a href="/software.php">Software</a>
-    <!-- <a href="/downloads.html">Downloads</a> -->
-    <!-- <a href="#">Videos</a> -->
-    <a href="/blog.php">Blog</a>
-    <a href="/services.php">Services</a>
-</div>
-<div id="account_menu" class="blur">
-    <a href="/account.php">My Account</a>
-    <a href="scripts/logout.php">Logout</a>
-</div>
-<section id="overlay"></section>
+            <header class="blur">
+                <?php include('include/header.php') ?>
+            </header>
+            <?php include('include/hamburger.php') ?>
+    <section id="overlay"></section>
         </div>
         <main>
             <div id="hero">
@@ -90,31 +56,7 @@
             </section>
         </main>
         <footer>
-    <div class="directories">
-        <span id="leg">
-            <p>Naztech Empire &copy; 2024</p>
-        </span>
-        <span>
-            <h4>Site Map</h4>
-            <a href="index.php"><p>Home</p></a>
-            <a href="software.php"><p>Software</p></a>
-            <!-- <a href="downloads.html"><p>Downloads</p></a> -->
-            <!-- <a href="#"><p>Videos</p></a> -->
-            <a href="blog.php"><p>Blog</p></a>
-            <a href="services.php"><p>Services</p></a>
-        </span>
-        <span>
-            <h4>Social</h4>
-            <a href="https://www.instagram.com/naztechmedia/"><img src="/img/icons/icons8-instagram.svg" alt=""></a>
-            <a href="https://github.com/NILBOGtheSavior"><img src="/img/icons/icons8-github.svg" alt=""></a>
-            <a href="https://www.youtube.com/channel/UCFLmlQDTB47XnFYeJE_Pe4Q"><img src="/img/icons/icons8-youtube.svg" alt=""></a>
-            <small>
-                <a href="#"><p><u>Terms and Conditions</u></p></a>
-                <a href="#"><p><u>Privacy Policy</u></p></a>
-            </small>
-            
-        </span>
-    </div>
-</footer>
+            <?php include('include/footer.php') ?>
+        </footer>
     </body>
 </html>
