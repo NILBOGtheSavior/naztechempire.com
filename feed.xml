@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-02-26T19:57:30-06:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Naztech Empire</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Linux Series 101: Introduction to Linux</title><link href="http://localhost:4000/blog/linux_101" rel="alternate" type="text/html" title="Linux Series 101: Introduction to Linux" /><published>2024-01-15T14:03:00-06:00</published><updated>2024-01-15T14:03:00-06:00</updated><id>http://localhost:4000/blog/linux_101</id><content type="html" xml:base="http://localhost:4000/blog/linux_101"><![CDATA[<ol id="contents">
+  <li>
+    <h4 id="contents">Contents</h4>
+  </li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#the-drawbacks-of-windows">The Drawbacks of Windows</a></li>
+  <li><a href="#linus-father-of-linux-and-penguin-loving-programmers">Linus, Father of Linux</a></li>
+  <li><a href="#linux-and-the-kernel">Linux and the Kernel</a></li>
+  <li><a href="#the-linux-terminal">The Linux Terminal</a></li>
+  <li><a href="#102-installation-and-dual-boot">102: Installation and Dual Boot</a></li>
+</ol>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>When it comes to operating systems, three popular ones stand out: Microsoft Windows, MacOS, and Linux. Windows is the most widely used, offering a variety of applications ranging from video games and graphics programs to office tools. While Windows boasts a diverse software ecosystem, it is not without its drawbacks.</p>
+
+<h2 id="the-drawbacks-of-windows">The Drawbacks of Windows</h2>
+
+<p>Windows is a visually appealing operating system, with major updates every few years. The design has improved significantly since the problematic Windows 8 update, which aimed at enhancing the tablet user experience. Windows 10 struck a balance between desktop and tablet versions, incorporating features from Windows 8 while addressing its issues. Windows 11 was a makeover with a few helpful widgets sprinkled here and there. Overall, a solid OS with many advantages.</p>
+
+<p>However, Windows has its drawbacks, particularly in terms of system efficiency. The operating system tends to be resource-intensive, with numerous background processes running and sometimes inefficient operations that strain the CPU. This causes issues such as lag, delayed loading times, and increased power consumption.</p>
+
+<p>Another significant disadvantage of Windows is the lack of freedom and customization options. Unlike open-source alternatives like Linux, Windows is a closed-source OS that limits user control. Windows users have fewer customization features and lack access to system files and configuration files.</p>
+
+<h2 id="linus-father-of-linux-and-penguin-loving-programmers">Linus, Father of Linux <em><small>(and penguin-loving programmers)</small></em></h2>
+
+<p class="inlineImage10"><img src="/img/blog/linux_101/001.png" alt="Tux the Mascot" title="Tux the Mascot" /></p>
+
+<p>Before I introduce Linux, I would like to introduce you to Linus Torvalds, a Finnish computer scientist. He is the magical being who created the <a href="#the-kernel">Linux Kernel</a> in 1991. He wanted to create an open-source alternative to Unix, another popular operating system. It started as a personal project, but after sharing it with the community, the collaborative effort developed it into the Operating System we know today.</p>
+
+<p>Over the years, Linux evolved into a powerful and versatile operating system kernel. It became a cornerstone for various Linux distributions (distros) like Ubuntu, Fedora, and Debian. It’s also the foundation for Android, powering a large share of mobile devices. Linux has become a dominant force in server environments, running a significant portion of servers worldwide. This website runs on a Linux box.</p>
+
+<h3 id="penguin-mascot">Penguin Mascot</h3>
+
+<p>When Linus Torvalds birthed the Linux kernel into the digital realm, he not only laid the foundation for a revolutionary operating system but also introduced a distinctive and endearing symbol: Tux the penguin. Adopted as the official mascot of the Linux kernel, Tux is not just a quirky choice; it encapsulates the very essence of the project’s ethos, its open and friendly nature.</p>
+
+<h2 id="linux-and-the-kernel">Linux and the Kernel</h2>
+
+<h3 id="linux">Linux</h3>
+
+<p>Linux is an open-source operating system. This means that users can access and modify its source code. This allows for multiple developments to occur. This ‘open’ philosophy fosters collaboration and innovation within the global developer community. An example of this is the development of several available Linux distributions (distros), including Ubuntu, Fedora, Debian, and CentOS. These distros package the kernel with additional software and a User Interface (UI).</p>
+
+<p>Linux boasts a multitude of impressive features that contribute to its remarkable flexibility, enabling it to seamlessly adapt to various purposes.</p>
+
+<ul>
+  <li>
+    <p><strong>Multitasking:</strong> Multitasking allows multiple processes to run simultaneously. This means that the system can be delegated to run, for example, a file server in one container, a media server in another, and still can complete day-to-day operations such as programming, text editing, web browsing, etc.</p>
+  </li>
+  <li>
+    <p><strong>Multiuser:</strong> The concept of multiuser functionality in Linux proves exceptionally valuable, particularly within a server environment. In this setting, the ability for multiple users to seamlessly interact with the system concurrently is a key advantage. This collaborative approach not only enhances operational efficiency but also facilitates a streamlined and cooperative workflow, making Linux an ideal choice for servers where simultaneous user interactions are a common and essential requirement.</p>
+  </li>
+  <li>
+    <p><strong>Stability and Reliability:</strong> Linux is known for its stability and reliability, making it a preferred choice for servers and critical systems. It often powers mission-critical infrastructure, including web servers and enterprise environments.</p>
+  </li>
+  <li>
+    <p><strong>Security Features:</strong> Linux has robust security features, including user privilege management, file permissions, and a firewall. Regular security updates and a proactive community contribute to a secure computing environment.</p>
+  </li>
+  <li>
+    <p><strong>Command Line Interface (CLI):</strong> Linux offers a powerful command-line interface, providing users with extensive control over system configuration and management. Many Linux enthusiasts prefer the CLI for its efficiency and flexibility.</p>
+  </li>
+</ul>
+
+<h3 id="the-kernel">The Kernel</h3>
+
+<p>The kernel is the core component responsible for managing hardware resources and providing essential services. If the hardware was the body of a computer, the kernel would be the soul. The Linux kernel follows a monolithic architecture, where the core functionalities are part of a single, large executable file. Device drivers, file systems, and system calls are integral parts of the monolithic kernel. Linux kernel developers prioritize hardware compatibility, aiming to support a wide range of devices. Regular updates include new drivers and enhancements to ensure compatibility with evolving hardware.</p>
+
+<p>The Linux kernel is developed collaboratively by a diverse community of developers worldwide. The development process involves regular releases, with contributors submitting patches and improvements. The Linux kernel undergoes continuous performance optimization to improve resource utilization and responsiveness. Kernel updates often include improvements in scheduling, memory management, and other critical areas.</p>
+
+<h2 id="the-linux-terminal">The Linux Terminal</h2>
+
+<p class="reduceImage50"><img src="/img/blog/linux_101/terminal.png" alt="The Linux terminal" title="The Linux terminal" /></p>
+
+<h3 id="command-line-interface-cli">Command-Line Interface (CLI)</h3>
+
+<p>The terminal provides a command-line interface, allowing users to interact with the operating system by typing commands. Operations include listing directories (or folders, for you basic <em>Windows</em> users), creating, deleting, copying, and moving files, and many more.
+<!-- To see more commands, check out [this]() post. -->
+Unlike graphical user interfaces (GUIs), the terminal relies on text-based input and output, providing a powerful and efficient way to control the system. The terminal is often associated with a shell, which is a command interpreter that interprets user commands and executes them.</p>
+
+<h4 id="bash">BASH</h4>
+
+<p>Bash, short for “Bourne Again SHell,” is a widely used command processor and scripting shell in Unix-like operating systems, including Linux. Users can create scripts by writing a series of commands that Bash can execute. Bash is an evolution of the original Bourne Shell (sh) developed by Stephen Bourne. It incorporates features from other shells, such as the C Shell (<code class="language-plaintext highlighter-rouge">csh</code>) and the Korn Shell (<code class="language-plaintext highlighter-rouge">ksh</code>). It has become the default shell for many Linux distributions and is widely adopted in Unix-like systems.</p>
+
+<p>Bash includes features like command-line editing, history, and job control, enhancing the user experience and productivity. It supports aliases, allowing users to create shorthand names for commands. Bash scripts are executed by interpreting the commands sequentially. Users can make scripts executable and run them like any other program.</p>
+
+<p>Users can access a wide range of system commands directly from the terminal, enabling precise control over system configuration and management. The terminal provides commands for navigating and manipulating the file system, making tasks such as file and directory creation, deletion, and navigation efficient.</p>
+
+<p>Many Linux distributions use the terminal for package management, allowing users to install, update, and remove software packages using command-line tools like <code class="language-plaintext highlighter-rouge">apt</code> or <code class="language-plaintext highlighter-rouge">yum</code>. The terminal is crucial for remote server administration through protocols like SSH (Secure Shell), enabling users to manage servers and systems from a distance.</p>
+
+<p>Users can customize the appearance and behavior of the terminal to suit their preferences, including color schemes, fonts, and keyboard shortcuts.</p>
+
+<h2 id="102-installation-and-dual-boot">102: Installation and Dual Boot</h2>
+
+<p>In the next article, I will go over the installation of Linux and dual-boot, including customization.</p>]]></content><author><name>Nasser Abumariam</name></author><category term="Linux" /><summary type="html"><![CDATA[Contents Introduction The Drawbacks of Windows Linus, Father of Linux Linux and the Kernel The Linux Terminal 102: Installation and Dual Boot]]></summary></entry><entry><title type="html">Using Tkinter to Create GUI Apps in Python</title><link href="http://localhost:4000/blog/tkinter_gui" rel="alternate" type="text/html" title="Using Tkinter to Create GUI Apps in Python" /><published>2024-01-08T04:41:37-06:00</published><updated>2024-01-08T04:41:37-06:00</updated><id>http://localhost:4000/blog/tkinter_gui</id><content type="html" xml:base="http://localhost:4000/blog/tkinter_gui"><![CDATA[<ol id="contents">
+  <li>
+    <h4 id="contents">Contents</h4>
+  </li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#programming-in-python">Programming in Python</a></li>
+  <li><a href="#the-tkinter-library">The Tkinter Library</a></li>
+  <li><a href="#a-simple-tkinter-application">A Simple Tkinter Application</a></li>
+  <li><a href="#capabilities-of-a-gui-python-application">Capabilities of a GUI Python Application</a></li>
+  <li><a href="#visual-tk">Visual TK</a></li>
+  <li><a href="#packaging-and-distributing-gui-apps-with-pyinstaller">Packaging and Distributing GUI Apps with PyInstaller</a></li>
+  <li><a href="#conclusion">Conclusion</a></li>
+</ol>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Creating a desktop program from scratch can seem overwhelming, especially when you have no idea where to begin. Many frameworks have complex environments and make it hard to work up the nerve to learn what goes into making a program. Along comes Tkinter to the rescue.</p>
+
+<p>The name “Tkinter” comes from “Tk interface,” where Tk is the toolkit used in conjunction with Python to build GUI applications. Tkinter makes application programming easy with its simple function, high compatibility, great documentation, and simple grid system.</p>
+
+<h2 id="programming-in-python">Programming in Python</h2>
+
+<p>Python is an interpreted programming language, rather than a compiled one. This means that an interpreter runs through each line of code at runtime, and then executes it, compared to a compiled program, where a compiler will convert the entire program into binary code upon compilation, and the computer executes the binary code when the user runs the program. This is beneficial as you don’t need to compile your program every time you want to run it. This speeds up the development process considerably, especially when the programs being compiled start increasing in size<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<p>Python is, in my opinion, one of the easiest programming languages to learn. When I come back to it after weeks of programming in C++, I get confused by how simple the syntax is. I look at my code like, “I’m missing some brackets or a semi-colon or something”, but lo and behold, the interpreter runs my code like nothing.</p>
+
+<h2 id="the-tkinter-library">The Tkinter Library</h2>
+
+<p>Tkinter provides a set of tools and widgets that allow developers to create interactive and visually appealing desktop applications with ease. Tkinter is also cross-platform. This is possible because Tkinter wraps the native GUI elements provided by the underlying operating system. Tkinter provides a variety of pre-built widgets such as buttons, labels, entry fields, text boxes, and more. These widgets serve as the building blocks for constructing the graphical interface of your application.</p>
+
+<h2 id="a-simple-tkinter-application">A Simple Tkinter Application</h2>
+
+<p class="reduceImage50"><img src="/img/blog/tkinter-gui/001.png" alt="Screenshot of the Tkinter App" title="Jekyllrb.com Homepage" /></p>
+
+<p>This is a basic Tkinter application that will render a window with a button and a label<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>. You can try it yourself. To check whether the Tkinter library is installed, you can run the <code class="language-plaintext highlighter-rouge">python -m tkinter</code> command in the terminal. A small window should pop up. If not, you may need to install the Tkinter library first. Refer to the <a href="https://docs.python.org/3/library/tkinter.html">documentation</a> for instructions on how to install Tkinter.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">tkinter</span> <span class="k">as</span> <span class="n">tk</span>
+
+<span class="k">def</span> <span class="nf">on_button_click</span><span class="p">():</span>
+    <span class="n">label</span><span class="p">.</span><span class="nf">config</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="sh">"</span><span class="s">Button Clicked!</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Create the main window
+</span><span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Tk</span><span class="p">()</span>
+<span class="n">root</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">Tkinter Example</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Create a button
+</span><span class="n">button</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sh">"</span><span class="s">Click me!</span><span class="sh">"</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">on_button_click</span><span class="p">)</span>
+<span class="n">button</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Create a label
+</span><span class="n">label</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sh">"</span><span class="s">Hello, Tkinter!</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">label</span><span class="p">.</span><span class="nf">pack</span><span class="p">()</span>
+
+<span class="c1"># Start the Tkinter event loop
+</span><span class="n">root</span><span class="p">.</span><span class="nf">mainloop</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>To discover the other widgets and features that Tkinter provides, check out the documentation, or you can check out “Modern Tkinter for Busy Python Developers” by Mark Roseman. The selection of features is comprehensive, and there is even theming to customize the look of your application, but the main focus of this article is functionality. Themes will be delved into in a future article.</p>
+
+<h2 id="capabilities-of-a-gui-python-application">Capabilities of a GUI Python Application</h2>
+
+<p>Python is a diverse programming language with many libraries. This proves limitless possibilities when it comes to programming a GUI application with Tkinter. Below you can see a Tkinter application combined with OpenCV2<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> to create a camera app.</p>
+
+<p class="reduceImage50"><img src="/img/blog/tkinter-gui/002.png" alt="Screenshot of a Tkinter Camera App" title="Tkinter Camera App" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">cv2</span>
+<span class="kn">from</span> <span class="n">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageTk</span>
+<span class="kn">import</span> <span class="n">tkinter</span> <span class="k">as</span> <span class="n">tk</span>
+
+<span class="k">def</span> <span class="nf">runmonitor</span><span class="p">():</span>
+    <span class="n">cv2image</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">cvtColor</span><span class="p">(</span><span class="n">cap</span><span class="p">.</span><span class="nf">read</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="nf">fromarray</span><span class="p">(</span><span class="n">cv2image</span><span class="p">)</span>
+    <span class="n">imgtk</span> <span class="o">=</span> <span class="n">ImageTk</span><span class="p">.</span><span class="nc">PhotoImage</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">img</span><span class="p">)</span>
+    <span class="n">webcap</span><span class="p">.</span><span class="n">imgtk</span> <span class="o">=</span> <span class="n">imgtk</span>
+    <span class="n">webcap</span><span class="p">.</span><span class="nf">configure</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">imgtk</span><span class="p">)</span>
+    <span class="n">webcap</span><span class="p">.</span><span class="nf">after</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">runmonitor</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">cap</span><span class="p">,</span> <span class="n">webcap</span>
+    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nc">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Initialize capture variable with camera index 0
+</span>    <span class="c1"># If multiple cameras are connected, the index must be changed to the desired camera index.
+</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Tk</span><span class="p">()</span>
+    <span class="n">root</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">Webcam Example</span><span class="sh">"</span><span class="p">)</span>
+
+    <span class="n">cv2image</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">cvtColor</span><span class="p">(</span><span class="n">cap</span><span class="p">.</span><span class="nf">read</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="nf">fromarray</span><span class="p">(</span><span class="n">cv2image</span><span class="p">)</span>
+    <span class="n">imgtk</span> <span class="o">=</span> <span class="n">ImageTk</span><span class="p">.</span><span class="nc">PhotoImage</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">img</span><span class="p">)</span>
+    
+    <span class="n">webcap</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">imgtk</span><span class="p">)</span>
+    <span class="n">webcap</span><span class="p">.</span><span class="n">imgtk</span> <span class="o">=</span> <span class="n">imgtk</span>
+    <span class="n">webcap</span><span class="p">.</span><span class="nf">pack</span><span class="p">()</span>
+
+    <span class="n">root</span><span class="p">.</span><span class="nf">after</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">runmonitor</span><span class="p">)</span>  <span class="c1"># Start the webcam monitoring loop
+</span>
+    <span class="n">root</span><span class="p">.</span><span class="nf">mainloop</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="nf">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>It is clear that with Python and Tkinter, it is possible to build a strong, well-functioning app. There are hundreds of Python libraries that can be used in tandem with Tkinter to accomplish any desired feature.</p>
+
+<h2 id="visual-tk">Visual TK</h2>
+
+<p>The grid layout in Tkinter is not the most forgiving design method. It requires planning and maybe even a sketch for more complex applications. I usually plan how I want my application to look and then divide that into grids, but if I didn’t enjoy the challenge (I may be a masochist), I would probably use Visual TK.</p>
+
+<p>Unsure of whether I need to explain what Visual TK is, I will give a short description. Its a visual GUI builder that lets you drag and drop widgets onto a grid and build your application visually. I haven’t used it yet, though I found it important to mention.</p>
+
+<h2 id="packaging-and-distributing-gui-apps-with-pyinstaller">Packaging and Distributing GUI Apps with PyInstaller</h2>
+
+<p>When it comes to distributing the software created with Tkinter, I haven’t seen an easier method of packaging an application. With <code class="language-plaintext highlighter-rouge">PyInstaller</code>, one can easily package their entire program, which can include many files and directories, into a single executable file.</p>
+
+<p>This means that PyInstaller automatically packages dependencies and libraries into one folder. There is even a <code class="language-plaintext highlighter-rouge">--onefile</code> option that condenses the whole folder into the executable. This is extremely convenient for maintaining apps, since the packaging process is simplified, you can work on improving and ensuring the features are up to date.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In conclusion, Tkinter is a great way to build GUI apps. It allows for programming in a simple, easy-to-learn language, it’s full of functionality, cross-platform, and can be easily packaged with a handy Python library. It also has great customizability and a decent community that would be more than happy to answer questions on forums.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>In performance-intensive scenarios, compiled programs often excel due to their direct translation into machine code, enabling faster execution. Interpreted languages, relying on line-by-line execution, may introduce performance overhead. While advancements like just-in-time compilation and optimizations have narrowed the gap, highly performance-critical applications often favor compiled languages for their inherent efficiency. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Pack and grid are two geometry managers used for organizing and placing widgets within a container (typically a window). The pack method is a geometry manager that organizes widgets in blocks before placing them in the parent widget. The grid method is a geometry manager that organizes widgets in a table-like structure of rows and columns. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>OpenCV is an open-source computer vision and machine learning software library. Originally developed by Intel, it is now maintained by the OpenCV community. OpenCV is widely used for various image and video processing tasks and provides a rich set of tools and functions for computer vision applications. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>Nasser Abumariam</name></author><category term="Software_Development" /><summary type="html"><![CDATA[Contents Introduction Programming in Python The Tkinter Library A Simple Tkinter Application Capabilities of a GUI Python Application Visual TK Packaging and Distributing GUI Apps with PyInstaller Conclusion]]></summary></entry><entry><title type="html">Streamlined Web Development: Embracing Jekyll for Content Management</title><link href="http://localhost:4000/blog/creating_this_website" rel="alternate" type="text/html" title="Streamlined Web Development: Embracing Jekyll for Content Management" /><published>2024-01-01T16:56:13-06:00</published><updated>2024-01-01T16:56:13-06:00</updated><id>http://localhost:4000/blog/creating_this_website</id><content type="html" xml:base="http://localhost:4000/blog/creating_this_website"><![CDATA[<ol id="contents">
+  <li>
+    <h4 id="contents">Contents</h4>
+  </li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#static-brilliance---no-hyding-the-advantages">Static Brilliance - No Hyding the Advantages</a></li>
+  <li><a href="#crafting-my-theme">Crafting My Theme</a></li>
+  <li><a href="#simplified-content-management">Simplified Content Management</a></li>
+  <li><a href="#the-joy-of-independence">The Joy of Independence</a></li>
+  <li><a href="#conclusion">Conclusion</a></li>
+</ol>
+
+<h2 id="introduction">Introduction</h2>
+
+<p><img src="/img/blog/creating_this_website/001.png" alt="Screenshot of the Jekyll website" title="Jekyllrb.com Homepage" /></p>
+
+<p>Developing your website from the ground up is a stimulating and gratifying process. The ability to mold each pixel to your exact specification leaves little to be desired. Most people would opt to use an online website builder, with its gallery of hundreds of themes, however, as convenient as website builders are, you don’t feel the godlike power of forging your exact vision on an HTML canvas.</p>
+
+<p>I feel that the biggest drawback of a custom-built website is the difficulty of managing the vast number of pages that can accumulate, especially with a blog-style website, where, every post will have its page. However, <a href="https://jekyllrb.com/">Jekyll</a>, an amazing tool that excels in simplifying the management of dynamic content, emerges as the perfect solution.</p>
+
+<h2 id="static-brilliance---no-hyding-the-advantages">Static Brilliance - No <em>Hyding</em> the Advantages</h2>
+
+<p>Jekyll steps into the spotlight as the hero, an elegant workaround to the headache that content management previously entailed, without the need for databases or complicated back-end coding. Jekyll works by transforming plain text into a static website. This yields boosts in speed and offers a clean and fast user experience.</p>
+
+<p>Jekyll uses themes and templates to format the content onto the page, converting the plain text to a readable <code class="language-plaintext highlighter-rouge">.html</code> file. This allows you to iterate over each plain text file to display all of your blog posts. This means that, rather than adding each post to the home page, the blog list, and wherever else it may appear, using a <code class="language-plaintext highlighter-rouge">for loop</code>, you can automate that whole process.</p>
+
+<h2 id="crafting-my-theme">Crafting My Theme</h2>
+
+<h3 id="starting-with-the-design">Starting With the Design</h3>
+
+<p>Creating the theme for this website started outside of Jekyll. I designed the landing page, beginning with the header and navigation bar. This was fairly simple, and using the <code class="language-plaintext highlighter-rouge">&lt;header&gt;</code> tags, I was able to organize and segregate my <code class="language-plaintext highlighter-rouge">html</code> content easily. After the header, I moved onto the hero section, and then the main contents of the index page. I completed the webpage with the footer, and used the <code class="language-plaintext highlighter-rouge">&lt;footer&gt;</code> tag to separate it from the rest of the page, just as I did the header.</p>
+
+<h3 id="integrating-my-design-with-jekyll">Integrating My Design With Jekyll</h3>
+
+<p>After I was happy with how it looked, I created the Jekyll folder. I started copying my files into the specified directories and took apart my <code class="language-plaintext highlighter-rouge">index.html</code> file. The header and footer were then separated from the file and placed into the <code class="language-plaintext highlighter-rouge">_includes</code> directory. This allows me to use an <code class="language-plaintext highlighter-rouge">{{ include &lt;file.ext&gt; }}</code> tag to import the same header and footer into all my template pages. All that is left is to create the template pages in the <code class="language-plaintext highlighter-rouge">_layouts</code> directory, including a <code class="language-plaintext highlighter-rouge">{{ content }}</code> tag to import your <code class="language-plaintext highlighter-rouge">.markdown</code> file contents into the page.</p>
+
+<h2 id="simplified-content-management">Simplified Content Management</h2>
+
+<p>While crafting a visually appealing website was a priority, the heart of the matter lay in managing content effortlessly. Jekyll’s reliance on Markdown made content creation a breeze. Writing blog posts, updating project descriptions, or adding new pages—all accomplished with the simplicity of plain text.</p>
+
+<p>One of the biggest time savers is the iterative features that Jekyll provides. Jekyll allows you to loop over all the files in a directory and generate code based on that. Using variables declared in a page’s front matter, we can pass data into the <code class="language-plaintext highlighter-rouge">html</code> code in each iteration.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c">&lt;!-- front matter found at the beginning of each markdown document --&gt;</span>
+
+---
+layout: default
+title:  "Example"
+image: example.jpg
+date:   2023-12-27 02:59:19 -0600
+---
+
+
+<span class="c">&lt;!-- html code found in the template page --&gt;</span>
+
+{% for page in site.pages %}
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"{{ page.url }}"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;figure&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"img/{{ page.image }}"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;figcaption&gt;</span>{{ page.title }}<span class="nt">&lt;/figcaption&gt;</span>
+        <span class="nt">&lt;/figure&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+{% endfor %}
+
+</code></pre></div></div>
+<h2 id="the-joy-of-independence">The Joy of Independence</h2>
+
+<p>What sets Jekyll apart is its ability to offer a self-contained web environment. No reliance on external databases or server-side processing—just static files that could be deployed effortlessly. This independence meant my website was not only fast and secure but also a joy to maintain.</p>
+
+<p>The deployment process is a graceful dance: initializing a <code class="language-plaintext highlighter-rouge">git</code> repository, pushing to a remote counterpart, and effortlessly pulling it into my web server.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In conclusion, embracing Jekyll for content management has been a gratifying experience. From crafting a custom theme to simplifying content management, Jekyll has become a trusted ally in my journey to establish a distinctive and efficient online presence. If you’re a fellow enthusiast of design and simplicity, consider giving Jekyll a try — you might find, as I did, that it’s the perfect companion for your digital endeavors.</p>]]></content><author><name>Nasser Abumariam</name></author><category term="Web_Development" /><summary type="html"><![CDATA[Contents Introduction Static Brilliance - No Hyding the Advantages Crafting My Theme Simplified Content Management The Joy of Independence Conclusion]]></summary></entry></feed>

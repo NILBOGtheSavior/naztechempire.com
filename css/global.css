@@ -1,0 +1,84 @@
+:root {
+    /*** Color List: ***
+    * Deep Gold: 194, 155, 12
+    * Dark Champagne Gold: 215, 198, 157
+    * Dark Champagne: 194, 178, 128
+    * Steel Gray: 114, 111, 112
+    * Electric Blue: 3, 80, 150
+    * Rich Electric Blue: 83, 104, 120
+    */
+
+    --rgb_value: 194, 155, 12;
+    --accent: rgba(var(--rgb_value), 1);
+    --accent75: rgba(var(--rgb_value), 0.75);
+    --accent50: rgba(var(--rgb_value), 0.5);
+    --accent25: rgba(var(--rgb_value), 0.25);
+    --accent10: rgba(var(--rgb_value), 0.1);
+}
+
+.inlineImage10 {
+    /* display: inline-block; */
+    margin: 10px 20px;
+    height: 200px;
+    float: right;
+    img {
+        height: 100%;
+    }
+}
+
+.reduceImage50 {
+    width: 50%;
+    margin: auto;
+}
+
+
+@media (max-width: 320px) {
+    .inlineImage10 {
+        display: block;
+        margin: 10px auto;
+        width: 100%;
+        height: auto;
+        
+        img {
+            width: 100%;
+        }
+    }
+    .reduceImage50 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 320px) {
+    .inlineImage10 {
+        /* display: block; */
+        margin: 10px auto;
+        width: 100%;
+        height: auto;
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    .reduceImage50 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 750px) {
+    .inlineImage10 {
+        margin: 10px 20px;
+        height: 200px;
+        width: auto;
+        float: right;
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .reduceImage50 {
+        width: 50%;
+        margin: auto;
+    }
+}

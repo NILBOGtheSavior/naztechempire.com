@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="description" content="">
+                <meta charset="utf-8">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="32x32">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="/js/menu.js"></script>
+        <script src="/js/overlay.js"></script>
+        <script src="/js/code-copy.js"></script>
+        <script src="/js/validate.min.js"></script>
+        <script src="/js/validator.js"></script>
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/code.css">
+        <?php  
+        include("scripts/login.php"); 
+        ?>  
+        <link rel="stylesheet" href="/css/blog.css">
+        <style>
+            #hero_image {
+                background-image: url('/img/blog/tkinter_gui/hero.jpg');
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div id="hero">
+                <div id="hero_image"></div>
+                <div id="hero_text">
+                    <h1>Using Tkinter to Create GUI Apps in Python</h1>
+                </div>
+            </div>
+            <section>
+                <a href="/blog.php" id="back_link" target="_PARENT"><p>< Blog Posts</p></a>
+                <ol id="contents">
+  <li>
+    <h4 id="contents">Contents</h4>
+  </li>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#programming-in-python">Programming in Python</a></li>
+  <li><a href="#the-tkinter-library">The Tkinter Library</a></li>
+  <li><a href="#a-simple-tkinter-application">A Simple Tkinter Application</a></li>
+  <li><a href="#capabilities-of-a-gui-python-application">Capabilities of a GUI Python Application</a></li>
+  <li><a href="#visual-tk">Visual TK</a></li>
+  <li><a href="#packaging-and-distributing-gui-apps-with-pyinstaller">Packaging and Distributing GUI Apps with PyInstaller</a></li>
+  <li><a href="#conclusion">Conclusion</a></li>
+</ol>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Creating a desktop program from scratch can seem overwhelming, especially when you have no idea where to begin. Many frameworks have complex environments and make it hard to work up the nerve to learn what goes into making a program. Along comes Tkinter to the rescue.</p>
+
+<p>The name “Tkinter” comes from “Tk interface,” where Tk is the toolkit used in conjunction with Python to build GUI applications. Tkinter makes application programming easy with its simple function, high compatibility, great documentation, and simple grid system.</p>
+
+<h2 id="programming-in-python">Programming in Python</h2>
+
+<p>Python is an interpreted programming language, rather than a compiled one. This means that an interpreter runs through each line of code at runtime, and then executes it, compared to a compiled program, where a compiler will convert the entire program into binary code upon compilation, and the computer executes the binary code when the user runs the program. This is beneficial as you don’t need to compile your program every time you want to run it. This speeds up the development process considerably, especially when the programs being compiled start increasing in size<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<p>Python is, in my opinion, one of the easiest programming languages to learn. When I come back to it after weeks of programming in C++, I get confused by how simple the syntax is. I look at my code like, “I’m missing some brackets or a semi-colon or something”, but lo and behold, the interpreter runs my code like nothing.</p>
+
+<h2 id="the-tkinter-library">The Tkinter Library</h2>
+
+<p>Tkinter provides a set of tools and widgets that allow developers to create interactive and visually appealing desktop applications with ease. Tkinter is also cross-platform. This is possible because Tkinter wraps the native GUI elements provided by the underlying operating system. Tkinter provides a variety of pre-built widgets such as buttons, labels, entry fields, text boxes, and more. These widgets serve as the building blocks for constructing the graphical interface of your application.</p>
+
+<h2 id="a-simple-tkinter-application">A Simple Tkinter Application</h2>
+
+<p class="reduceImage50"><img src="/img/blog/tkinter-gui/001.png" alt="Screenshot of the Tkinter App" title="Jekyllrb.com Homepage" /></p>
+
+<p>This is a basic Tkinter application that will render a window with a button and a label<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>. You can try it yourself. To check whether the Tkinter library is installed, you can run the <code class="language-plaintext highlighter-rouge">python -m tkinter</code> command in the terminal. A small window should pop up. If not, you may need to install the Tkinter library first. Refer to the <a href="https://docs.python.org/3/library/tkinter.html">documentation</a> for instructions on how to install Tkinter.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">tkinter</span> <span class="k">as</span> <span class="n">tk</span>
+
+<span class="k">def</span> <span class="nf">on_button_click</span><span class="p">():</span>
+    <span class="n">label</span><span class="p">.</span><span class="nf">config</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="sh">"</span><span class="s">Button Clicked!</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Create the main window
+</span><span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Tk</span><span class="p">()</span>
+<span class="n">root</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">Tkinter Example</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># Create a button
+</span><span class="n">button</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Button</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sh">"</span><span class="s">Click me!</span><span class="sh">"</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="n">on_button_click</span><span class="p">)</span>
+<span class="n">button</span><span class="p">.</span><span class="nf">pack</span><span class="p">(</span><span class="n">pady</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Create a label
+</span><span class="n">label</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="sh">"</span><span class="s">Hello, Tkinter!</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">label</span><span class="p">.</span><span class="nf">pack</span><span class="p">()</span>
+
+<span class="c1"># Start the Tkinter event loop
+</span><span class="n">root</span><span class="p">.</span><span class="nf">mainloop</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>To discover the other widgets and features that Tkinter provides, check out the documentation, or you can check out “Modern Tkinter for Busy Python Developers” by Mark Roseman. The selection of features is comprehensive, and there is even theming to customize the look of your application, but the main focus of this article is functionality. Themes will be delved into in a future article.</p>
+
+<h2 id="capabilities-of-a-gui-python-application">Capabilities of a GUI Python Application</h2>
+
+<p>Python is a diverse programming language with many libraries. This proves limitless possibilities when it comes to programming a GUI application with Tkinter. Below you can see a Tkinter application combined with OpenCV2<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> to create a camera app.</p>
+
+<p class="reduceImage50"><img src="/img/blog/tkinter-gui/002.png" alt="Screenshot of a Tkinter Camera App" title="Tkinter Camera App" /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">cv2</span>
+<span class="kn">from</span> <span class="n">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageTk</span>
+<span class="kn">import</span> <span class="n">tkinter</span> <span class="k">as</span> <span class="n">tk</span>
+
+<span class="k">def</span> <span class="nf">runmonitor</span><span class="p">():</span>
+    <span class="n">cv2image</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">cvtColor</span><span class="p">(</span><span class="n">cap</span><span class="p">.</span><span class="nf">read</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="nf">fromarray</span><span class="p">(</span><span class="n">cv2image</span><span class="p">)</span>
+    <span class="n">imgtk</span> <span class="o">=</span> <span class="n">ImageTk</span><span class="p">.</span><span class="nc">PhotoImage</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">img</span><span class="p">)</span>
+    <span class="n">webcap</span><span class="p">.</span><span class="n">imgtk</span> <span class="o">=</span> <span class="n">imgtk</span>
+    <span class="n">webcap</span><span class="p">.</span><span class="nf">configure</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">imgtk</span><span class="p">)</span>
+    <span class="n">webcap</span><span class="p">.</span><span class="nf">after</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">runmonitor</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">cap</span><span class="p">,</span> <span class="n">webcap</span>
+    <span class="n">cap</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nc">VideoCapture</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Initialize capture variable with camera index 0
+</span>    <span class="c1"># If multiple cameras are connected, the index must be changed to the desired camera index.
+</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Tk</span><span class="p">()</span>
+    <span class="n">root</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">"</span><span class="s">Webcam Example</span><span class="sh">"</span><span class="p">)</span>
+
+    <span class="n">cv2image</span> <span class="o">=</span> <span class="n">cv2</span><span class="p">.</span><span class="nf">cvtColor</span><span class="p">(</span><span class="n">cap</span><span class="p">.</span><span class="nf">read</span><span class="p">()[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cv2</span><span class="p">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="nf">fromarray</span><span class="p">(</span><span class="n">cv2image</span><span class="p">)</span>
+    <span class="n">imgtk</span> <span class="o">=</span> <span class="n">ImageTk</span><span class="p">.</span><span class="nc">PhotoImage</span><span class="p">(</span><span class="n">image</span><span class="o">=</span><span class="n">img</span><span class="p">)</span>
+    
+    <span class="n">webcap</span> <span class="o">=</span> <span class="n">tk</span><span class="p">.</span><span class="nc">Label</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">imgtk</span><span class="p">)</span>
+    <span class="n">webcap</span><span class="p">.</span><span class="n">imgtk</span> <span class="o">=</span> <span class="n">imgtk</span>
+    <span class="n">webcap</span><span class="p">.</span><span class="nf">pack</span><span class="p">()</span>
+
+    <span class="n">root</span><span class="p">.</span><span class="nf">after</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">runmonitor</span><span class="p">)</span>  <span class="c1"># Start the webcam monitoring loop
+</span>
+    <span class="n">root</span><span class="p">.</span><span class="nf">mainloop</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="nf">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>It is clear that with Python and Tkinter, it is possible to build a strong, well-functioning app. There are hundreds of Python libraries that can be used in tandem with Tkinter to accomplish any desired feature.</p>
+
+<h2 id="visual-tk">Visual TK</h2>
+
+<p>The grid layout in Tkinter is not the most forgiving design method. It requires planning and maybe even a sketch for more complex applications. I usually plan how I want my application to look and then divide that into grids, but if I didn’t enjoy the challenge (I may be a masochist), I would probably use Visual TK.</p>
+
+<p>Unsure of whether I need to explain what Visual TK is, I will give a short description. Its a visual GUI builder that lets you drag and drop widgets onto a grid and build your application visually. I haven’t used it yet, though I found it important to mention.</p>
+
+<h2 id="packaging-and-distributing-gui-apps-with-pyinstaller">Packaging and Distributing GUI Apps with PyInstaller</h2>
+
+<p>When it comes to distributing the software created with Tkinter, I haven’t seen an easier method of packaging an application. With <code class="language-plaintext highlighter-rouge">PyInstaller</code>, one can easily package their entire program, which can include many files and directories, into a single executable file.</p>
+
+<p>This means that PyInstaller automatically packages dependencies and libraries into one folder. There is even a <code class="language-plaintext highlighter-rouge">--onefile</code> option that condenses the whole folder into the executable. This is extremely convenient for maintaining apps, since the packaging process is simplified, you can work on improving and ensuring the features are up to date.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In conclusion, Tkinter is a great way to build GUI apps. It allows for programming in a simple, easy-to-learn language, it’s full of functionality, cross-platform, and can be easily packaged with a handy Python library. It also has great customizability and a decent community that would be more than happy to answer questions on forums.</p>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>In performance-intensive scenarios, compiled programs often excel due to their direct translation into machine code, enabling faster execution. Interpreted languages, relying on line-by-line execution, may introduce performance overhead. While advancements like just-in-time compilation and optimizations have narrowed the gap, highly performance-critical applications often favor compiled languages for their inherent efficiency. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>Pack and grid are two geometry managers used for organizing and placing widgets within a container (typically a window). The pack method is a geometry manager that organizes widgets in blocks before placing them in the parent widget. The grid method is a geometry manager that organizes widgets in a table-like structure of rows and columns. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>OpenCV is an open-source computer vision and machine learning software library. Originally developed by Intel, it is now maintained by the OpenCV community. OpenCV is widely used for various image and video processing tasks and provides a rich set of tools and functions for computer vision applications. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+            </section>
+            <section>
+                <hr>
+                <div id="blog_info">
+                    <p><b>Published:</b> 01/08/24</p>
+                    <p><b>Author:</b> Nasser Abumariam</p>
+                </div>
+            </section>
+            <section>
+                <h2>Read more:</h2>
+                <div class="otherArticles">
+                    
+                    
+                    
+                        
+                            
+                            <a href="/blog_view.php?post=linux_101" target="_PARENT" >
+                                <div class="thumbnail"><img src="/img/blog/linux_101/thumbnail.jpg" alt=""></div>
+                                <h2 class="blog_title">Linux Series 101: Introduction to Linux</h2>
+                                
+                            </a>
+                                
+                            
+                        
+                    
+                        
+                    
+                        
+                            
+                            <a href="/blog_view.php?post=creating_this_website" target="_PARENT" >
+                                <div class="thumbnail"><img src="/img/blog/creating_this_website/thumbnail.jpg" alt=""></div>
+                                <h2 class="blog_title">Streamlined Web Development: Embracing Jekyll for Content Management</h2>
+                                
+                            </a>
+                                
+                            
+                        
+                    
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
